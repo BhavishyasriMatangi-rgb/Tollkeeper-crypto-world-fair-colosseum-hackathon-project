@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: "Fraunces", "Cormorant Garamond", Georgia, Cambria, serif;
+  --font-editorial: "Cormorant Garamond", "Fraunces", Georgia, serif;
+  --font-cinzel: "Cinzel", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-arena-gold: #D4AF37;
+  --color-arena-gold-light: #F3E5AB;
+  --color-arena-gold-dark: #997A15;
+
+  --color-oxblood: #3E101B;
+  --color-oxblood-dark: #270911;
+  --color-oxblood-light: #581927;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+/* Subtle classic grain / arch texture overlay */
+.bg-arena-pattern {
+  background-image: radial-gradient(rgba(180, 150, 80, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.dark .bg-arena-pattern {
+  background-image: radial-gradient(rgba(212, 175, 55, 0.06) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 140, 140, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 140, 140, 0.45);
+}

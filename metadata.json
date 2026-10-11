@@ -1,0 +1,6 @@
+{
+  "name": "Tollkeeper",
+  "description": "The toll gate for AI agent payments. Real-time Solana risk intelligence verifying wallets and token mints before payments execute.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
